@@ -9,9 +9,9 @@ package modelos;
  * @author pc
  */
 public class Habitacion {
-    public final static int NUMHABITACION = 0;
-    public final static String TIPOHABITACION = " ";
-    public final static int PRECIO = 0;
+    public final static int NUMHABITACION = 4;
+    public final static String TIPOHABITACION = "suite ";
+    public final static int PRECIO = 30;
     
     private int numHabitacion;
     private String tipoHabitacion;
