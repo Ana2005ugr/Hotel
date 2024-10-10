@@ -4,6 +4,8 @@
  */
 package modelos;
 
+import java.util.Objects;
+
 /**
  *
  * @author pc
@@ -65,5 +67,46 @@ public class Hotel {
     public void setn_Habitaciones(){
         this.n_Habitaciones=n_Habitaciones;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 97 * hash + Objects.hashCode(this.nombre);
+        hash = 97 * hash + Objects.hashCode(this.direccion);
+        hash = 97 * hash + this.estrellas;
+        hash = 97 * hash + this.n_Habitaciones;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Hotel other = (Hotel) obj;
+        if (this.estrellas != other.estrellas) {
+            return false;
+        }
+        if (this.n_Habitaciones != other.n_Habitaciones) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        return Objects.equals(this.direccion, other.direccion);
+    }
+
+    @Override
+    public String toString() {
+        return "Hotel{" + "nombre=" + nombre + ", direccion=" + direccion + ", estrellas=" + estrellas + ", n_Habitaciones=" + n_Habitaciones + '}';
+    }
+    
+    
             
 }

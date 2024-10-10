@@ -4,6 +4,8 @@
  */
 package modelos;
 
+import java.util.Objects;
+
 /**
  *
  * @author pc
@@ -65,4 +67,41 @@ public class Cliente {
     public void setdni(){
         this.dni=dni;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "nombre=" + nombre + ", telefono=" + telefono + ", email=" + email + ", dni=" + dni + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        if (this.telefono != other.telefono) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.email, other.email)) {
+            return false;
+        }
+        return Objects.equals(this.dni, other.dni);
+    }
+    
+    
 }

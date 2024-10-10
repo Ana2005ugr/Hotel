@@ -4,6 +4,8 @@
  */
 package modelos;
 
+import java.util.Objects;
+
 /**
  *
  * @author pc
@@ -55,5 +57,39 @@ public class Habitacion {
     public void setprecio(){
         this.precio=precio;
     }
+
+    @Override
+    public String toString() {
+        return "Habitacion{" + "numHabitacion=" + numHabitacion + ", tipoHabitacion=" + tipoHabitacion + ", precio=" + precio + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Habitacion other = (Habitacion) obj;
+        if (this.numHabitacion != other.numHabitacion) {
+            return false;
+        }
+        if (this.precio != other.precio) {
+            return false;
+        }
+        return Objects.equals(this.tipoHabitacion, other.tipoHabitacion);
+    }
+    
+    
     
 }
