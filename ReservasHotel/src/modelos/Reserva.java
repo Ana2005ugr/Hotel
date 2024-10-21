@@ -15,6 +15,8 @@ public class Reserva {
     public static final int PRECIO = 30;
     
     private String nombre;
+    private Habitacion habitacion;
+    private Cliente cliente;
     private String dni;
     private String tipohabitacion;
     private int precio;

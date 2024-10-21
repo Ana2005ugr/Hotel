@@ -26,6 +26,27 @@ public class Habitacion {
         this.precio=PRECIO;
     }
     
+    //Constructor parametrico con tipo de habitación
+    public Habitacion(int numhabitacion, String tipoHabitacion, int precio, TipoHabitacion tipo){
+        this.numHabitacion=NUMHABITACION;
+        this.tipoHabitacion=TIPOHABITACION;
+        this.precio=PRECIO;
+        
+        switch (tipo) {
+            case INDIVIDUAL:
+                this.precio = 100;
+                break;
+            case DOBLE:
+                this.precio = 200;
+                break;
+            case SUITE:
+                this.precio = 300;
+            default:
+                this.precio = 0;
+                break;
+        }
+    }
+    
     //Constructor vacio
     public Habitacion(){
         this(NUMHABITACION, TIPOHABITACION, PRECIO);
@@ -40,21 +61,21 @@ public class Habitacion {
     public int getnumHabitacion(){
         return numHabitacion;
     }
-    public void setnumHabitacion(){
+    public void setnumHabitacion(int numHabitacion){
         this.numHabitacion=numHabitacion;
     }
     
     public String gettipoHabitacion(){
         return tipoHabitacion;
     }
-    public void settipoHabitacion(){
+    public void settipoHabitacion(String tipoHabitacion){
         this.tipoHabitacion=tipoHabitacion;
     }
     
     public int getprecio(){
         return precio;
     }
-    public void setprecio(){
+    public void setprecio(int precio){
         this.precio=precio;
     }
 

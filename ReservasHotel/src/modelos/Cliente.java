@@ -43,28 +43,28 @@ public class Cliente {
     public String getnombre(){
         return nombre;
     }
-    public void setnombre(){
+    public void setnombre(String nombre){
         this.nombre=nombre;
     }
     
     public int gettelefono(){
         return telefono;
     }
-    public void settelefono(){
+    public void settelefono(int telefono){
         this.telefono=telefono;
     }
     
     public String getemail(){
         return email;
     }
-    public void setemail(){
+    public void setemail(String email){
         this.email=email;
     }
     
     public String getdni(){
         return dni;
     }
-    public void setdni(){
+    public void setdni(String dni){
         this.dni=dni;
     }
 
