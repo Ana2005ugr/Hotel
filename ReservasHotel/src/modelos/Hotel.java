@@ -4,7 +4,7 @@
  */
 package modelos;
 
-import java.util.Objects;
+import java.util.*;
 
 /**
  *
@@ -20,6 +20,7 @@ public class Hotel {
     private String direccion;
     private int estrellas;
     private int n_Habitaciones;
+    //private List<Habitacion> listaHabitaciones = new ArrayList<>();
     
     //Constructor paramétrico
     public Hotel(String nombre, String direccion, int estrellas, int n_Habitaciones){
@@ -43,28 +44,28 @@ public class Hotel {
     public String getnombre(){
         return nombre;
     }
-    public void setnombre(){
+    public void setnombre(String nombre){
         this.nombre = nombre;
     }
     
     public String getdireccion(){
         return direccion;
     }
-    public void setdireccion(){
+    public void setdireccion(String direccion){
         this.direccion = direccion;
     }
     
     public int getestrellas(){
         return estrellas;
     }
-    public void setestrellas(){
+    public void setestrellas(int estrellas){
         this.estrellas = estrellas;
     }
     
     public int getn_Habitaciones(){
         return n_Habitaciones;
     }
-    public void setn_Habitaciones(){
+    public void setn_Habitaciones(int n_Habitaciones){
         this.n_Habitaciones=n_Habitaciones;
     }
 
